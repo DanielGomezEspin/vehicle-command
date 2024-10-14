@@ -285,7 +285,7 @@ func (d *Dispatcher) Start(ctx context.Context) error {
 
 // Listen for incoming commands and dispatch them to registered receivers.
 func (d *Dispatcher) listen(ready chan<- struct{}) {
-	log.Info("Starting dispatcher service...")
+	log.Info("-->Starting dispatcher service...")
 	d.doneLock.Lock()
 	if d.terminate == nil {
 		d.terminate = make(chan struct{})
